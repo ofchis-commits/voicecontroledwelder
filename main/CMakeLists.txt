@@ -10,9 +10,9 @@ idf_component_register(
              esp_common
              freertos
              esp_adc
-             esp_dac
              esp_timer
              esp_ble
              nvs_flash
              bt
+             driver
 )
