@@ -1,0 +1,40 @@
+menu "Welder Pulse Control Configuration"
+
+    config WELDER_MAX_VOLTAGE
+        int "Maximum Output Voltage (V)"
+        default 15
+        help
+            Maximum voltage output range for welder control
+
+    config WELDER_MAX_FREQUENCY
+        int "Maximum Pulse Frequency (Hz x10)"
+        default 100
+        help
+            Maximum pulse frequency in Hz (stored as x10)
+            Default 100 = 10 Hz
+
+    config WELDER_POTENTIOMETER_PIN
+        int "Potentiometer ADC Pin"
+        default 35
+        help
+            GPIO pin connected to the 5kΩ potentiometer
+
+    config WELDER_DAC_PIN
+        int "DAC Output Pin"
+        default 17
+        help
+            GPIO pin for DAC voltage output
+
+    config WELDER_PWM_PIN
+        int "PWM Output Pin"
+        default 1
+        help
+            GPIO pin for PWM pulse control
+
+    config WELDER_BLE_ENABLED
+        bool "Enable Bluetooth Control"
+        default y
+        help
+            Enable BLE server for remote control
+
+endmenu
